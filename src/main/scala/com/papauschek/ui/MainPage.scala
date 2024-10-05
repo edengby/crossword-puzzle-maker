@@ -48,7 +48,7 @@ class MainPage:
   resultPartialElement.addEventListener("click", { _ => renderSolution() })
   resultFullElement.addEventListener("click", { _ => renderSolution() })
 
-  /** read the words from the user interface and generate the puzzle in the background using web workers */
+  /** read the words from the user interface and generate the puzzle in the background using web workerss */
   def generateSolution(): Unit =
     val rawInputWords = inputElement.value.linesIterator.map(normalizeWord).toSeq
     val inputWords = rawInputWords.filter(word => word.nonEmpty && !word.startsWith("#"))
